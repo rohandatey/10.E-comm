@@ -58,16 +58,6 @@ const Orders = () => {
       satus: "pending",
     },
 
-      {
-      orderId: "#R7896412",
-      custmoreName: "rohan",
-      email: "rohan@gmail.com",
-      phone: "+91-7896541230",
-      product: "iphone",
-      amount: 70000,
-      date: "04/11/2026 11:47am",
-      satus: "pending",
-    },
   ]);
 
   return (
