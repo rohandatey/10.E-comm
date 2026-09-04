@@ -12,7 +12,7 @@ const Layout = ({children}) => {
       <section
         className="bg-gray-100 h-screen transition-all"
         style={{ marginLeft: menu }}>
-        <nav className="bg-white p-6 flex items-center justify-between">
+        <nav className="bg-white p-6 flex items-center justify-between sticky top-0 left-0">
           <div className="flex gap-4 items-center">
             <button
               onClick={() => setMenu(menu == 280 ? 0 : 280)}
