@@ -14,6 +14,12 @@ const Layout = ({ children }) => {
       icon: <i className="ri-dashboard-2-line mr-2"></i>,
       link:"/admin/dashboard"
     },
+
+    {
+      label: "Customers",
+      icon:<i class="ri-user-line mr-2"></i> ,
+      link:"/admin/customers"
+    },
     
     {
       label: "Products",
@@ -39,11 +45,7 @@ const Layout = ({ children }) => {
       link:"/admin/settings"
     },
     
-    {
-      label: "Logout",
-      icon: <i className="ri-logout-box-line mr-2"></i>,
-      link:"/admin/logout"
-    },
+    
   ];
   return (
    <>
@@ -69,7 +71,12 @@ const Layout = ({ children }) => {
                 </Link>
               </>
             );})}
+        <button className="text-gray-50 p-4 block hover:bg-rose-700 text-lg text-left cursor-pointer">
+          <i className="ri-logout-box-line mr-2"></i>
+          Logout
+        </button>
         </div>
+        
       </aside>
       <section className="bg-gray-100 h-screen transition-all"
         style={{ marginLeft: menu }}>
@@ -133,6 +140,10 @@ const Layout = ({ children }) => {
               </>
             );})}
         </div>
+        <button className="text-gray-50 p-4 block hover:bg-rose-700 text-lg">
+          <i className="ri-logout-box-line mr-2"></i>
+          Logout
+        </button>
       </aside>
       <section className="bg-gray-100 h-screen transition-all"
         style={{ marginLeft: mobileSize }}>

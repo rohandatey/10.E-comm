@@ -1,58 +1,50 @@
 import React, { useState } from "react";
 import Layout from "./Layout";
-const Payment = () => {
-  
-  const [payments, setPayments] = useState([
+const Customers = () => {
+  const [customers, setCustomers] = useState([
     {
       custmoreName: "rohan",
       email: "rohan@gmail.com",
       phone: "+91-7896541230",
-      amount: 50000,
       date: "04/11/2026 11:47am",
     },
     {
       custmoreName: "rohan",
       email: "rohan@gmail.com",
       phone: "+91-7896541230",
-      amount: 50000,
       date: "04/11/2026 11:47am",
-    },
+    }, 
     {
       custmoreName: "rohan",
       email: "rohan@gmail.com",
       phone: "+91-7896541230",
-      amount: 50000,
       date: "04/11/2026 11:47am",
-    },
+    }, 
     {
       custmoreName: "rohan",
       email: "rohan@gmail.com",
       phone: "+91-7896541230",
-      amount: 50000,
       date: "04/11/2026 11:47am",
-    },
+    }, 
     {
       custmoreName: "rohan",
       email: "rohan@gmail.com",
       phone: "+91-7896541230",
-      amount: 50000,
       date: "04/11/2026 11:47am",
-    },
+    }, 
     {
       custmoreName: "rohan",
       email: "rohan@gmail.com",
       phone: "+91-7896541230",
-      amount: 50000,
       date: "04/11/2026 11:47am",
-    },
-    
+    }, 
     
   ]);
 
   return (
     <Layout>
       <div>
-        <h1 className="text-xl font-semibold">Payments</h1>
+        <h1 className="text-xl font-semibold">customers</h1>
         <div className="mt-6">
           <table className="w-full">
             <thead>
@@ -61,13 +53,12 @@ const Payment = () => {
                 <th className="p-4">Costumer's Name</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Amount</th>
                 <th>Date</th>
                 
               </tr>
             </thead>
             <tbody>
-              {payments.map((item, index) => {
+              {customers.map((item, index) => {
                 return (
                   <tr
                     key={index}
@@ -87,7 +78,6 @@ const Payment = () => {
                     </td>
                     <td>{item.email}</td>
                     <td>{item.phone}</td>
-                    <td>₹{item.amount.toLocaleString()}</td>
                     <td>{item.date}</td>
                     
                   </tr>
@@ -101,5 +91,4 @@ const Payment = () => {
   );
 };
 
-
-export default Payment;
+export default Customers;
