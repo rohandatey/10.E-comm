@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 // for admin part
 // import Admin from './Components/Admin/Layout'
-import Products from "./Components/Admin/Products";
+import AdminProducts from "./Components/Admin/Products";
 import Orders from "./Components/Admin/Orders";
 import Payment from "./Components/Admin/Payment";
 import Setting from "./Components/Admin/Setting";
@@ -15,18 +15,21 @@ import NotFound from "./Components/NotFound";
 
 // for other part
 import Home from "./Components/Home";
-
+import Products from "./Components/Products"
+import Category from "./Components/Category";
 const App = () => {
   return (
     <Routes>
       {/* for other part */}
       <Route path="/" element={<Home />} />
+      <Route path="/products" element={<Products/>}/>
+      <Route path="/category" element={<Category/>}/>
       
       {/* for admin part */}
       <Route path="/admin">
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="customers" element={<Customers />} />
-        <Route path="products" element={<Products />} />
+        <Route path="products" element={<AdminProducts />} />
         <Route path="orders" element={<Orders />} />
         <Route path="payment" element={<Payment />} />
         <Route path="settings" element={<Setting />} />

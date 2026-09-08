@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
 
-const Home = () => {
+const Products = () => {
   const [products, setProducts] = useState([
     {
       title: "Blue shirt for mens",
@@ -94,54 +94,32 @@ const Home = () => {
   return (
     <Layout>
       <div>
-        <header>
-          <Swiper
-            navigation={true}
-            pagination={true}
-            modules={[Navigation, Pagination]}
-            slidesPerView={1}
-          >
-            <SwiperSlide>
-              <img src="/images/p1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/p2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/p3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/p4.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/p5.jpg" />
-            </SwiperSlide>
-          </Swiper>
-        </header>
-
         <div className="md:p-16 p-8">
-          <h1 className="text-3xl font-bold text-center">Latest Products</h1>
+          <h1 className="text-3xl font-bold text-center">All Products</h1>
           <p className="mx-auto text-gray-500 md:w-7/12 mt-2 mb-16 text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
             similique quisquam ad modi dignissimos at dolore temporibus quam,
             eligendi.
           </p>
           <div className="md:w-10/12 mx-auto grid md:grid-cols-4 gap-12">
-          {products.map((item,index)=>(
-            <div key={index} className="bg-white shadow-lg">
-              <img className="rounded-md" src={item.thumbnail} alt="img" />
-              <div className="p-4">
-                <h1 className="text-lg font-semibold">{item.title}</h1>
+            {products.map((item, index) => (
+              <div key={index} className="bg-white shadow-lg">
+                <img className="rounded-md" src={item.thumbnail} alt="img" />
+                <div className="p-4">
+                  <h1 className="text-lg font-semibold">{item.title}</h1>
+                </div>
+                <div className="space-x-2">
+                  <label className="font-bold text-lg">
+                    ₹{item.price - (item.price * item.discount) / 100}
+                  </label>
+                  <del>₹{item.price}</del>
+                  <label className="text-gray-600">({item.discount}%)</label>
+                </div>
+                <button className="w-full py-2 bg-green-500 rounded-md text-white font-semibold mt-4">
+                  Buy now
+                </button>
               </div>
-              <div className="space-x-2">
-                <label className="font-bold text-lg">₹{item.price-(item.price*item.discount)/100}</label>
-                <del>₹{item.price}</del>
-                <label className="text-gray-600">({item.discount}%)</label>
-              </div>
-              <button className="w-full py-2 bg-green-500 rounded-md text-white font-semibold mt-4">Buy now</button>
-
-            </div>
-          ))}
+            ))}
           </div>
         </div>
       </div>
@@ -149,4 +127,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Products;
